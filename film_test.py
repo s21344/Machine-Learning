@@ -1,5 +1,5 @@
 import cv2
-
+from test_cv import marker
 
 video = cv2.VideoCapture()
 video.open('movingball.mp4')
@@ -21,6 +21,7 @@ while True:
     if counter % 2 == 0:
         cv2.putText(frame_rgb, 'pilka', (100, 150),
                     cv2.FONT_HERSHEY_SIMPLEX, 4, (255, 255, 255), 4)
+
 
     result.write(frame_rgb)
     counter = counter + 1

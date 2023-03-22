@@ -3,7 +3,6 @@ import numpy as np
 from screeninfo import get_monitors
 import os
 
-
 def uploud(i):
     i = i-ord('0')
     image = norm_size(cv2.imread('pliki/{}'.format(images[i])))
@@ -137,6 +136,7 @@ def main():
     cv2.createTrackbar('low', 'obrazek', 0, 255, change_h)
     cv2.createTrackbar('high', 'obrazek', 0, 255, change_h)
     cv2.createTrackbar('ksize', 'obrazek', 5, 50, change_h)
+
 
     while True:
         key = cv2.waitKey()
